@@ -14,6 +14,7 @@ use yii\widgets\ActiveForm;
 $this->title = 'Students';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
 <div class="student-index">
 
     <div class="row">
@@ -26,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
         // Html::a('Create Student', ['create'], ['class' => 'btn btn-success']) 
         Modal::begin([
             'title' => '<h5>Add Student</h5>',
-            'toggleButton' => ['label' => 'click me', ['class' => 'btn btn-success']],
+            'toggleButton' => ['label' => 'Add new', ['class' => 'btn btn-success']],
             'size'=>'modal-lg',
             'class'=>'btn showModalButton',
         ]);
@@ -111,6 +112,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
+    <div class="card shadow p-3">
         <?= GridView::widget([
         'dataProvider' => $dataProvider,
         // 'filterModel' => $searchModel,
@@ -136,6 +138,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]); ?>
+    </div>
 
 
 </div>

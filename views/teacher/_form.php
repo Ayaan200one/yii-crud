@@ -18,9 +18,16 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'city')->textInput(['maxlength' => true]) ?>
+    <?= 
+    $form->field($model,'gender')->dropDownList(array('Karachi'=>'Karachi'));
+    // $form->field($model, 'city')->textInput(['maxlength' => true]) 
+    ?>
 
-    <?= $form->field($model, 'gender')->textInput(['maxlength' => true]) ?>
+    <?= 
+    $form->field($model,'gender')->dropDownList(array('M'=>'Men','F'=>'Women'));
+    // $form->field($model, 'gender')->textInput(['maxlength' => true]) 
+    ?>
+
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
