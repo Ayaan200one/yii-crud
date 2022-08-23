@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
 
     <?= 
-    $form->field($model,'gender')->dropDownList(array('Karachi'=>'Karachi'));
+    $form->field($model,'city')->dropDownList(array('Karachi'=>'Karachi'));
     // $form->field($model, 'city')->textInput(['maxlength' => true]) 
     ?>
 
